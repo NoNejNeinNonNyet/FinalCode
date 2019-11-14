@@ -13,7 +13,7 @@ namespace Repository.Repositories
     {
         public List<OrdersByCategoryModel> OrdersByCategoryReport()
         {
-            return DataContext.Database.SqlQuery<OrdersByCategoryModel>("EXECUTE [dbo].[OrdersByCategoryReport]").ToList();
+            return DataContext.Database.SqlQuery<OrdersByCategoryModel>("EXECUTE [dbo].[OrderReport]").ToList();
         }
     }
 }
