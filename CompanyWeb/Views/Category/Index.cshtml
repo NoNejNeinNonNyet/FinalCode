@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#firstTab">View All</a></li>
+    <li class="active"><a data-toggle="tab" href="#secondTab">Add New</a></li>
+    <li><a data-toggle="tab" href="#thirdTab">Orders by Category Report</a></li>
+</ul>
+<div class="tab-content">
+    <div id="firstTab" class="tab-pane fade in">@Html.Action("ViewAll")</div>
+    <div id="secondTab" class="tab-pane fade in active">@Html.Action("AddOrEdit")</div>
+    <div id="thirdTab" class="tab-pane fade in">@Html.Action("OrdersByCategoryReport")</div>
+</div>
+
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+    <script>
+        function activatejQueryTable() {
+            $("#categoryTable").DataTable();
+
+            $("#myTable").DataTable({
+                "processing": true, // for show progress bar
+                "serverSide": true, // for process server side
+                "filter": false, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "ajax": {
+                    "url": "/Category/LoadData",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "OrderID", "name": "OrderID", "autoWidth": true },
+                    { "data": "ProductName", "name": "ProductName", "autoWidth": true },
+                    { "data": "OrderUnitPrice", "name": "OrderUnitPrice", "autoWidth": true },
+                    { "data": "OrderQuantity", "name": "OrderQuantity", "autoWidth": true },
+                    { "data": "FullPrice", "name": "FullPrice", "autoWidth": true },
+                    { "data": "OrderDate", "name": "OrderDate", "autoWidth": true },
+                    { "data": "ShippedDate", "name": "ShippedDate", "autoWidth": true },
+                    { "data": "ShipTo", "name": "ShipTo", "autoWidth": true },
+                    { "data": "ShipAddress", "name": "ShipAddress", "autoWidth": true },
+                    { "data": "ShipCity", "name": "ShipCity", "autoWidth": true },
+                    { "data": "ShipPostalCode", "name": "ShipPostalCode", "autoWidth": true },
+                    { "data": "ShipperName", "name": "ShipperName", "autoWidth": true },
+                ]
+            });
+        }
+
+        $(function () {
+            activatejQueryTable();
+
+        });
+
+    </script>
+}

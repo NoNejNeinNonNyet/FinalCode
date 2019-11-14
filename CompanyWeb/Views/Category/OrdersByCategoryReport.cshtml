@@ -1,0 +1,153 @@
+﻿@*@model IEnumerable<Entities.BussinessModels.OrdersByCategoryModel>
+
+    @{
+        ViewBag.Title = "OrdersByCategory";
+        Layout = null;
+    }
+
+    <table class="table table-striped table-condensed" id="ordersByCategoryTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderUnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderQuantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FullPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipTo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipPostalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipperName)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderUnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipTo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipCity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipPostalCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipperName)
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>*@
+
+
+
+@{
+    ViewBag.Title = "Orders By Category";
+    Layout = null;
+}
+<div>
+    <table class="table table-striped table-condensed" id="myTable">
+        <thead>
+            <tr>
+                <th>OrderID</th>
+                <th>ProductName</th>
+                <th>OrderUnitPrice</th>
+                <th>OrderQuantity</th>
+                <th>FullPrice</th>
+                <th>OrderDate</th>
+                <th>ShippedDate</th>
+                <th>ShipTo</th>
+                <th>ShipAddress</th>
+                <th>ShipCity</th>
+                <th>ShipPostalCode</th>
+                <th>ShipperName</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@*@section Scripts{
+    <script>
+        $(document).ready(function () {
+            debugger;
+            $("#myTable").DataTable({
+                "processing": true, // for show progress bar
+                "serverSide": true, // for process server side
+                "filter": false, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "ajax": {
+                    "url": "/Category/LoadData",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "OrderID", "name": "OrderID", "autoWidth": true },
+                    { "data": "ProductName", "name": "ProductName", "autoWidth": true },
+                    { "data": "OrderUnitPrice", "name": "OrderUnitPrice", "autoWidth": true },
+                    { "data": "OrderQuantity", "name": "OrderQuantity", "autoWidth": true },
+                    { "data": "FullPrice", "name": "FullPrice", "autoWidth": true },
+                    { "data": "OrderDate", "name": "OrderDate", "autoWidth": true },
+                    { "data": "ShippedDate", "name": "ShippedDate", "autoWidth": true },
+                    { "data": "ShipTo", "name": "ShipTo", "autoWidth": true },
+                    { "data": "ShipAddress", "name": "ShipAddress", "autoWidth": true },
+                    { "data": "ShipCity", "name": "ShipCity", "autoWidth": true },
+                    { "data": "ShipPostalCode", "name": "ShipPostalCode", "autoWidth": true },
+                    { "data": "ShipperName", "name": "ShipperName", "autoWidth": true },
+                ]
+            });
+        });
+    </script>
+}*@
