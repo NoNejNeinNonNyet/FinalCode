@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class CustomerRepository : Repository<Customer>,ICustomerRepository
+    public class CustomerRepository : Repository<Customer>, ICustomerRepository
     {
-      
+
     }
 }

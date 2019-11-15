@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public abstract class Repository<T> : IRepository<T> where T:BaseEntity
+    public abstract class Repository<T> : IRepository<T> where T : BaseEntity
     {
         public CompanyDB DataContext { get { return ContextFactory.GetDBContext(); } }
-        
+
         public virtual bool Add(T entity)
         {
             DataContext.Set<T>().Add(entity);
@@ -26,18 +26,18 @@ namespace Repository.Repositories
 
         public virtual IEnumerable<T> All(Expression<Func<T, bool>> predicate)
         {
-           return DataContext.Set<T>().Where(predicate).AsEnumerable();
+            return DataContext.Set<T>().Where(predicate).AsEnumerable();
         }
 
         public virtual void Delete(T entity)
         {
             DataContext.Set<T>().Remove(entity);
-      
+
         }
 
         public virtual void Edit(T entity)
         {
-            
+
         }
 
         public virtual void SaveChanges()
