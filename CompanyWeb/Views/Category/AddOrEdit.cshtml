@@ -39,7 +39,7 @@
                         <input type="submit" value="Submit" class="btn btn-default" />
                         @if (Model.ID != 0)
                         {
-                            <a class="btn btn-success" onclick="refreshAddNewTab('@Url.Action("AddOrEdit","Category",new{id=0})',false)"><i class="fa fa-plus"></i> Add New</a>
+                            <a class="btn btn-success" onclick="refreshAddNewTab('@Url.Action("AddOrEdit", "Category", new{id=0})',false)"><i class="fa fa-plus"></i> Add New</a>
                         }
                     </div>
                 </div>

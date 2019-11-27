@@ -7,14 +7,13 @@ using System.Web.Mvc;
 
 namespace CompanyWeb.Helpers
 {
-    public class MyCustomAttribute:ActionFilterAttribute
+    public class MyCustomAttribute : ActionFilterAttribute
     {
-
-       public ICategoryService CategoryService { get; set; }
+        public ICategoryService CategoryService { get; set; }
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             //todo logic
-           var c = CategoryService.GetAll().ToList();
+            var c = CategoryService.GetAll().ToList();
             base.OnActionExecuting(filterContext);
         }
     }

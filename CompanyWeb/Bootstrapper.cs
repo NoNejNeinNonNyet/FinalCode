@@ -17,7 +17,6 @@ namespace CompanyWeb
 {
     public static class Bootstrapper
     {
-
         public static void Run()
         {
             AutoFacConteinerBuilder();
@@ -52,7 +51,6 @@ namespace CompanyWeb
             builder.RegisterFilterProvider();
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
         }
     }
 }

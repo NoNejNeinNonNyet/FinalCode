@@ -128,14 +128,14 @@ namespace CompanyWeb.Controllers
             //SORT
             if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnDir)))
             {
-                list = list.OrderBy(t=>t.OrderDate).ToList();
+                list = list.OrderBy(t => t.OrderDate).ToList();
             }
 
             recordsTotal = list.Count();
             var data = list.Skip(skip).Take(pageSize).ToList();
 
             //draw = draw,
-            return Json(new {  recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = data }, JsonRequestBehavior.AllowGet);
+            return Json(new { recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = data }, JsonRequestBehavior.AllowGet);
         }
     }
 }

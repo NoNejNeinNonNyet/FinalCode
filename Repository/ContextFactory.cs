@@ -17,8 +17,8 @@ namespace Repository
             {
                 return (CompanyDB)HttpContext.Current.Items[dbContextKey];
             }
-              
-            var context= new CompanyDB();
+
+            var context = new CompanyDB();
             HttpContext.Current.Items[dbContextKey] = context;
 
             return context;

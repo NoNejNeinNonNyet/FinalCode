@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Services.Services
 {
-   public class CategoryService:Service<Category,ICategoryRepository>,ICategoryService
+    public class CategoryService : Service<Category, ICategoryRepository>, ICategoryService
     {
         private readonly ICategoryRepository _categoryRepository;
 

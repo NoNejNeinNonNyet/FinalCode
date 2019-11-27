@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Services.Services
 {
-    public abstract class Service<T,R> : IService<T>
+    public abstract class Service<T, R> : IService<T>
         where T : BaseEntity
         where R : IRepository<T>
     {
@@ -26,7 +26,7 @@ namespace Services.Services
         public virtual void Create(List<T> entities)
         {
             if (entities == null) return;
-            foreach(var entity in entities)
+            foreach (var entity in entities)
             {
                 Repository.Add(entity);
             }

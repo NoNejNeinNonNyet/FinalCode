@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Services.Interfaces
 {
-    public interface ICategoryService:IService<Category> 
+    public interface ICategoryService : IService<Category>
     {
         List<OrdersByCategoryModel> OrdersByCategoryReport();
     }

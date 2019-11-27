@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace CompanyWeb.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         private readonly IReportService _reportService;
@@ -20,13 +20,13 @@ namespace CompanyWeb.Controllers
         private readonly IHttpProvider _httpProvider;
 
         public HomeController(
-            IReportService reportService, 
+            IReportService reportService,
             ICategoryService categoryService,
             IHttpProvider httpProvider
             )
         {
-             _reportService = reportService;
-             _categoryService = categoryService;
+            _reportService = reportService;
+            _categoryService = categoryService;
             _httpProvider = httpProvider;
         }
 
@@ -58,7 +58,7 @@ namespace CompanyWeb.Controllers
         public JsonResult TestMethod()
         {
             //CustmerCategoriesModel result = _reportService.GetCustomerCategories(1);
-            return Json(new { Name = "Test", ID = 3 } ,JsonRequestBehavior.AllowGet);
+            return Json(new { Name = "Test", ID = 3 }, JsonRequestBehavior.AllowGet);
         }
     }
 }
