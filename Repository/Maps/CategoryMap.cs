@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Repository.Maps
 {
-   public class CategoryMap: EntityTypeConfiguration<Category>
+    public class CategoryMap : EntityTypeConfiguration<Category>
     {
         public CategoryMap()
         {

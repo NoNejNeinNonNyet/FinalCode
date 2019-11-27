@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Repository.Maps
 {
-   public class CustomerMap : EntityTypeConfiguration<Customer>
+    public class CustomerMap : EntityTypeConfiguration<Customer>
     {
         public CustomerMap()
         {
@@ -30,8 +31,8 @@ namespace Repository.Maps
             .WithRequired(e => e.Customer)
             .WillCascadeOnDelete(false);
 
-           // this.HasMany(t => t.CustomerMessages).WithRequired(z => z.Customer)
-             //   .HasForeignKey(z => z.CustomerID).WillCascadeOnDelete(false);
+            // this.HasMany(t => t.CustomerMessages).WithRequired(z => z.Customer)
+            //   .HasForeignKey(z => z.CustomerID).WillCascadeOnDelete(false);
         }
     }
 }

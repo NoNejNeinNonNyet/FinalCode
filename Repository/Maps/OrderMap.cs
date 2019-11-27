@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Maps
 {
-   public class OrderMap : EntityTypeConfiguration<Order>
+    public class OrderMap : EntityTypeConfiguration<Order>
     {
         public OrderMap()
         {

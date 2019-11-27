@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Maps
 {
-   public class OrderDetailMap:EntityTypeConfiguration<OrderDetail>
+    public class OrderDetailMap : EntityTypeConfiguration<OrderDetail>
     {
         public OrderDetailMap()
         {
@@ -17,7 +17,7 @@ namespace Repository.Maps
             this.Ignore(t => t.LastModifiedBy);
 
             HasKey(t => new { t.OrderID, t.ProductID });
-        
+
             Property(e => e.UnitPrice)
              .HasPrecision(19, 2);
 

@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Repository.Maps
 {
-   public class CustomerMessageMap : EntityTypeConfiguration<CustomerMessage>
+    public class CustomerMessageMap : EntityTypeConfiguration<CustomerMessage>
     {
         public CustomerMessageMap()
         {
@@ -21,9 +22,9 @@ namespace Repository.Maps
             this.Property(t => t.Message).HasMaxLength(500).IsRequired();
             this.Property(t => t.Topic).HasMaxLength(200).IsRequired();
 
-            this.HasRequired(t => t.Customer).WithMany(z=>z.CustomerMessages)
-                .HasForeignKey(t=>t.CustomerID).WillCascadeOnDelete(false);
-           
+            this.HasRequired(t => t.Customer).WithMany(z => z.CustomerMessages)
+                .HasForeignKey(t => t.CustomerID).WillCascadeOnDelete(false);
+
         }
     }
 }

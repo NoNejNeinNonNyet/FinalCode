@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Maps
 {
-   public class ShipperMap : EntityTypeConfiguration<Shipper>
+    public class ShipperMap : EntityTypeConfiguration<Shipper>
     {
         public ShipperMap()
         {
