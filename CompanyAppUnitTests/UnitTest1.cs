@@ -1,16 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.SessionState;
-using Autofac;
+﻿using Autofac;
 using Entities.BussinessModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Repository;
 using Repository.Interfaces;
 using Repository.Repositories;
 using Services.Interfaces;
+using System;
+using System.IO;
+using System.Web;
+using System.Web.SessionState;
 
 namespace CompanyAppUnitTests
 {
@@ -30,7 +28,7 @@ namespace CompanyAppUnitTests
         {
             get
             {
-                if(_autoFacContainer == null)
+                if (_autoFacContainer == null)
                 {
                     var builder = new ContainerBuilder();
                     builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerLifetimeScope();
@@ -124,7 +122,7 @@ namespace CompanyAppUnitTests
         {
             //Get list of all customers by category     
 
-            
+
         }
     }
 }

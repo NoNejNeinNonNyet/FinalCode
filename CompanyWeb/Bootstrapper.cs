@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using Services.HttpProvider;
+using Services.Interfaces;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
-using Autofac;
-using Autofac.Integration.Mvc;
-using Repository.Interfaces;
-using Repository.Repositories;
-using Services.HttpProvider;
-using Services.Interfaces;
-using Services.Services;
 
 namespace CompanyWeb
 {

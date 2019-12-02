@@ -1,9 +1,4 @@
 ﻿using CompanyWeb.Models;
-using Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace CompanyWeb.Extensions
 {
@@ -15,8 +10,8 @@ namespace CompanyWeb.Extensions
             {
                 ID = category.ID,
                 Name = category.Name,
-                Description=category.Description
-           
+                Description = category.Description
+
             };
         }
         public static Category ToCategory(this CategoryViewModel model)

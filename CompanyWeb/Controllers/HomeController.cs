@@ -1,13 +1,6 @@
 ﻿using CompanyWeb.Helpers;
-using Entities.BussinessModels;
-using Repository;
-using Services.HttpProvider;
 using Services.Interfaces;
-using Services.Services;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CompanyWeb.Controllers

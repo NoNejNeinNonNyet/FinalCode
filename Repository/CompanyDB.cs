@@ -1,10 +1,7 @@
 namespace Repository
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
     using Repository.Maps;
+    using System.Data.Entity;
 
     public partial class CompanyDB : DbContext
     {

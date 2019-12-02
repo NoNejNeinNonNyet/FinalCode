@@ -1,6 +1,4 @@
-﻿using CompanyWeb.Helpers;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace CompanyWeb
 {
@@ -9,7 +7,7 @@ namespace CompanyWeb
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-         //   filters.Add(new MyCustomAttribute());
+            //   filters.Add(new MyCustomAttribute());
         }
     }
 }
